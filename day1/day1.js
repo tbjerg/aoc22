@@ -13,15 +13,6 @@ split.forEach(function (x, i) {
     else
         k++;
 });
-var highest = 0, index = 0;
-Object.keys(dict).forEach(function (key) {
-    if (dict[key] > highest) {
-        highest = dict[key];
-        index = Number(key);
-    }
-});
-//answer 1
-console.log(highest);
 var h1 = 0, h2 = 0, h3 = 0;
 Object.keys(dict).forEach(function (key) {
     if (dict[key] > h1) {
@@ -33,8 +24,10 @@ Object.keys(dict).forEach(function (key) {
         h3 = h2;
         h2 = dict[key];
     }
-    else if (dict[key] > h3) {
+    else if (dict[key] > h3)
         h3 = dict[key];
-    }
 });
+//answer 1
+console.log(h1);
+//answer 2
 console.log(h1 + h2 + h3);
