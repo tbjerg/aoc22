@@ -1,4 +1,4 @@
-import { input } from "./day2input"
+import { input } from "./input"
 // const input = `A Y
 // B X
 // C Z`

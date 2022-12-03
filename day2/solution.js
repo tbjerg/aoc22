@@ -1,17 +1,17 @@
 "use strict";
-exports.__esModule = true;
-var day2input_1 = require("./day2input");
+Object.defineProperty(exports, "__esModule", { value: true });
+var input_1 = require("./input");
 // const input = `A Y
 // B X
 // C Z`
-var split = day2input_1.input.split('\n');
+var split = input_1.input.split('\n');
 var loss = function (input) { return input == 'X' ? 1 : input == 'Y' ? 2 : 3; };
 var draw = function (input) { return loss(input) + 3; };
 var win = function (input) { return loss(input) + 6; };
 var guide = {
     A: function (input) { return (input == 'X' ? draw : input == 'Y' ? win : loss)(input); },
     B: function (input) { return (input == 'X' ? loss : input == 'Y' ? draw : win)(input); },
-    C: function (input) { return (input == 'X' ? win : input == 'Y' ? loss : draw)(input); }
+    C: function (input) { return (input == 'X' ? win : input == 'Y' ? loss : draw)(input); },
 };
 var total = 0;
 split.forEach(function (x, i) {
@@ -31,7 +31,7 @@ console.log(total);
 var guide2 = {
     A: function (input) { return input == 'X' ? loss('Z') : input == 'Y' ? draw('X') : win('Y'); },
     B: function (input) { return input == 'X' ? loss('X') : input == 'Y' ? draw('Y') : win('Z'); },
-    C: function (input) { return input == 'X' ? loss('Y') : input == 'Y' ? draw('Z') : win('X'); }
+    C: function (input) { return input == 'X' ? loss('Y') : input == 'Y' ? draw('Z') : win('X'); },
 };
 var total2 = 0;
 split.forEach(function (x, i) {

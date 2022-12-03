@@ -1,4 +1,4 @@
-import { input } from "./day1input"
+import { input } from "./input"
 
 const testInput = `1000
 2000

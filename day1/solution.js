@@ -1,8 +1,8 @@
 "use strict";
-exports.__esModule = true;
-var day1input_1 = require("./day1input");
+Object.defineProperty(exports, "__esModule", { value: true });
+var input_1 = require("./input");
 var testInput = "1000\n2000\n3000\n\n4000\n\n5000\n6000\n\n7000\n8000\n9000\n\n10000";
-var split = day1input_1.input.split("\n");
+var split = input_1.input.split("\n");
 var dict = {};
 var k = 1;
 split.forEach(function (x, i) {
