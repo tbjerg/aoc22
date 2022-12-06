@@ -10,6 +10,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // move 2 from 2 to 1
 // move 1 from 1 to 2`
 var input_1 = require("./input");
+//would have finished ages ago.. but input was incorrect the whole time..
 var answer1 = function (setup, operations) {
     var stacks = {};
     setup.split("\n").forEach(function (x) {
