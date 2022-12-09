@@ -48,12 +48,10 @@ var answer1 = function () {
         var row = arr_1[_i];
         for (var _a = 0, row_1 = row; _a < row_1.length; _a++) {
             var tree = row_1[_a];
-            //is tree at an edge?
             if (isAtEdge(arr, i) || isAtEdge(row, j)) {
                 j++;
                 continue;
             }
-            //recursively traverse toward the edge for each cardinals..
             total += isTreeVisibleFromLeft(tree, row, j - 1) || isTreeVisibleFromRight(tree, row, j + 1) || isTreeVisibleFromAbove(tree, arr, i - 1, j) || isTreeVisibleFromBelow(tree, arr, i + 1, j) ? 1 : 0;
             j++;
         }
@@ -62,6 +60,7 @@ var answer1 = function () {
     }
     console.log(total);
 };
+answer1();
 var answer2 = function () {
     var determineLeftScore = function (treeToCompare, row, rowIdx, score) {
         if (rowIdx < 0)
@@ -96,12 +95,10 @@ var answer2 = function () {
         var row = arr_2[_i];
         for (var _a = 0, row_2 = row; _a < row_2.length; _a++) {
             var tree = row_2[_a];
-            //is tree at an edge?
             if (isAtEdge(arr, i) || isAtEdge(row, j)) {
                 j++;
                 continue;
             }
-            //recursively traverse toward the edge for each cardinals..
             var scenicScore = determineLeftScore(tree, row, j - 1, 0) * determineRightScore(tree, row, j + 1, 0) * determineUpScore(tree, arr, i - 1, j, 0) * determineDownScore(tree, arr, i + 1, j, 0);
             if (scenicScore > bestScenicScore)
                 bestScenicScore = scenicScore;
@@ -112,5 +109,4 @@ var answer2 = function () {
     }
     console.log(bestScenicScore);
 };
-//286200 too low
 answer2();
