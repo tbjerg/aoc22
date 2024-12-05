@@ -1,11 +1,10 @@
 {
     "compilerOptions": {
-        "target": "es5",
+        // "target": "ES6",
         "module": "commonjs",
         "lib": [
             "es6",
             "dom",
-            "es2021"
         ],
     }
 }
